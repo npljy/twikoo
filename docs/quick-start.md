@@ -1,5 +1,11 @@
 # 快速上手
 
+::: warning 注意：云开发免费额度变更
+腾讯云已取消免费的云开发基础版 1 套餐（参考[产品定价](https://cloud.tencent.com/document/product/876/39095)），同时还调整了按量计费环境的免费额度（参考[免费额度](https://cloud.tencent.com/document/product/876/47816)），新的免费额度数据库读操作数由原先的 50000 次 / 天降至 500 次 / 天，**已无法支撑 Twikoo 的运行需求**。请暂时放弃免费搭建或购买 6.9 元 / 月的新特惠基础版 1，Twikoo 将会尽快寻找解决方案。
+
+**此次免费额度变更暂时不会影响已有环境**，已有环境用户请勿随意销毁现有的基础版 1 环境。
+:::
+
 Twikoo 分为云函数和前端两部分，部署时请注意保存二者版本一致。
 
 * [云函数部署](#云函数部署)有 3 种方式，[一键部署](#一键部署)、[手动部署](#手动部署)和[命令行部署](#命令行部署)。
@@ -41,7 +47,7 @@ exports.main = require('twikoo-func').main
 8. 创建完成后，点击“twikoo"进入云函数详情页，进入“函数代码”标签，点击“文件 - 新建文件”，输入 `package.json`，回车
 9. 复制以下代码、粘贴到代码框中，点击“保存并安装依赖”
 ``` json
-{ "dependencies": { "twikoo-func": "1.2.0" } }
+{ "dependencies": { "twikoo-func": "1.3.1" } }
 ```
 
 ### 命令行部署
@@ -83,45 +89,27 @@ yarn deploy -e 您的环境id
 
 ## 前端部署
 
-### 在 Hexo Butterfly 主题使用
+### 在 Hexo 中使用
 
-Butterfly 目前支持 Twikoo，请查看 [Butterfly 安裝文檔(四) 主題配置-2](https://butterfly.js.org/posts/ceeb73f/#%E8%A9%95%E8%AB%96)
+#### 在 [Hexo Butterfly](https://github.com/jerryc127/hexo-theme-butterfly) 主题使用
 
-### 在 Hexo Keep 主题使用
+请参考 [Butterfly 安裝文檔(四) 主題配置-2](https://butterfly.js.org/posts/ceeb73f/#%E8%A9%95%E8%AB%96) 进行配置
 
-Keep v3.3.0 已支持 Twikoo，请查看 [hexo-theme-keep/_config.yml](https://github.com/XPoet/hexo-theme-keep/blob/master/_config.yml)
+#### 在 [Hexo Keep](https://github.com/XPoet/hexo-theme-keep) 主题使用
 
-``` yml
-comment:
-  twikoo:
-    enable: true
-    env_id:                                  # Tencent cloud environment id
-    region:                                  # environment region. If select Guangzhou, fill in "ap-guangzhou".
-```
+请参考 [hexo-theme-keep/_config.yml](https://github.com/XPoet/hexo-theme-keep/blob/master/_config.yml) 进行配置
 
-### 在 Hexo Volantis 主题使用
+#### 在 [Hexo Volantis](https://github.com/volantis-x/hexo-theme-volantis) 主题使用
 
-Volantis 目前支持 Twikoo，请查看 [hexo-theme-volantis/_config.yml](https://github.com/volantis-x/hexo-theme-volantis/blob/master/_config.yml)
+请参考 [hexo-theme-volantis/_config.yml](https://github.com/volantis-x/hexo-theme-volantis/blob/master/_config.yml) 进行配置
 
-``` yml
-comments:
-  twikoo:
-    js: https://cdn.jsdelivr.net/npm/twikoo@1.2.0/dist/twikoo.all.min.js
-    envId: xxxxxxxxxxxxxxx # 腾讯云环境id
-```
+#### 在 [Hexo Ayer](https://github.com/Shen-Yu/hexo-theme-ayer) 主题使用
 
-### 在 Hexo Ayer 主题使用
+请参考 [hexo-theme-ayer/_config.yml](https://github.com/Shen-Yu/hexo-theme-ayer/blob/master/_config.yml) 进行配置
 
-Ayer 目前支持 Twikoo，请查看 [hexo-theme-ayer/_config.yml](https://github.com/Shen-Yu/hexo-theme-ayer/blob/master/_config.yml)
+#### 在 [Hexo NexT](https://github.com/next-theme/hexo-theme-next) 主题使用
 
-``` yml
-twikoo:
-  envId: xxxxxxxxxxxxxxx # 腾讯云环境id
-```
-
-### 在 Hexo NexT 主题使用
-
-在 Hexo 项目根目录执行 `npm install hexo-next-twikoo`，然后在配置中添加
+**暂不支持 NexT 8 以下的版本**，请先升级到 NexT 8。然后在 Hexo 项目根目录执行 `npm install hexo-next-twikoo`，然后在配置中添加
 
 ``` yml
 twikoo:
@@ -131,31 +119,29 @@ twikoo:
   # region: ap-guangzhou # 环境地域，默认为 ap-shanghai
 ```
 
-### 在 Hexo Matery 主题使用
+#### 在 [Hexo Matery](https://github.com/blinkfox/hexo-theme-matery) 主题使用
 
-``` yml
-twikoo:
-  enable: true
-  envId: xxxxxxxxxxxxxxx # 环境 ID，搭建教程：https://twikoo.js.org/quick-start.html
-  # region: ap-guangzhou # 环境地域，默认为 ap-shanghai
-  # path: 'window.location.pathname' # 自定义文章路径
-```
+请参考 [hexo-theme-matery/_config.yml](https://github.com/blinkfox/hexo-theme-matery/blob/develop/_config.yml) 进行配置
 
-### 在 Hexo Icarus 主题使用
+#### 在 [Hexo Icarus](https://github.com/ppoffice/hexo-theme-icarus) 主题使用
 
 请参考 [基于腾讯云，给你的 Icarus 博客配上 Twikoo 评论系统](https://anzifan.com/post/icarus_to_candy_2/) by 异次元de机智君💯
 
-### 在 Hexo MengD(萌典) 主题使用
-MengD(萌典) 目前支持 Twikoo，请查看 [hexo-theme-MengD/_config.yml](https://github.com/lete114/hexo-theme-MengD/blob/master/_config.yml)
-``` yml
-# twikoo
-## https://twikoo.js.org/
-twikoo:
-  envId: xxxxxxxxx # 你的环境id
-  region: ap-shanghai # 环境地域，ap-shanghai / ap-guangzhou
-  path: window.location.pathname  # 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
-  option: 
-```
+#### 在 [Hexo MengD(萌典)](https://github.com/lete114/hexo-theme-MengD) 主题使用
+
+请参考 [hexo-theme-MengD/_config.yml](https://github.com/lete114/hexo-theme-MengD/blob/master/_config.yml) 进行配置
+
+#### 在 [hexo-theme-fluid](https://github.com/fluid-dev/hexo-theme-fluid) 主题使用
+
+请参考 [配置指南-评论](https://hexo.fluid-dev.com/docs/guide/#%E8%AF%84%E8%AE%BA) 进行配置
+
+#### 在 [hexo-theme-cards](https://github.com/ChrAlpha/hexo-theme-cards) 主题使用
+
+请参考 [hexo-theme-cards/_config.yml](https://github.com/ChrAlpha/hexo-theme-cards/blob/master/_config.yml) 进行配置
+
+#### 在 [maupassant-hexo](https://github.com/tufu9441/maupassant-hexo) 主题使用
+
+请参考 [maupassant-hexo/_config.yml](https://github.com/tufu9441/maupassant-hexo/blob/master/_config.yml) 进行配置
 
 ### 通过 CDN 引入
 
@@ -165,7 +151,7 @@ twikoo:
 
 ``` html
 <div id="tcomment"></div>
-<script src="https://cdn.jsdelivr.net/npm/twikoo@1.2.0/dist/twikoo.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/twikoo@1.3.1/dist/twikoo.all.min.js"></script>
 <script>
 twikoo.init({
   envId: '您的环境id',

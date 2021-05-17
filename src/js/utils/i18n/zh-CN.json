@@ -1,6 +1,7 @@
 {
   "ADMIN_COMMENT": "评论管理",
   "ADMIN_COMMENT_DELETE": "删除",
+  "ADMIN_COMMENT_DELETE_CONFIRM": "确认删除？",
   "ADMIN_COMMENT_HIDE": "隐藏",
   "ADMIN_COMMENT_IS_SPAM_SUFFIX": " (已隐藏)",
   "ADMIN_COMMENT_SHOW": "显示",
@@ -21,6 +22,7 @@
   "ADMIN_CONFIG_ITEM_COMMENT_PLACEHOLDER": "评论框提示信息，可用<br>换行，默认为空",
   "ADMIN_CONFIG_ITEM_DEFAULT_GRAVATAR": "默认的头像显示。默认值为 \"identicon\"，可选： 404、mp、identicon、monsterid、wavatar、retro、robohash、blank",  
   "ADMIN_CONFIG_ITEM_EMOTION_CDN": "表情 CDN，默认为：https://cdn.jsdelivr.net/gh/imaegoo/emotion/owo.json",
+  "ADMIN_CONFIG_ITEM_FORBIDDEN_WORDS": "违禁词配置，包含违禁词的内容会直接标记为垃圾评论。英文逗号分隔。",
   "ADMIN_CONFIG_ITEM_GRAVATAR_CDN": "自定义头像 CDN 地址。如：cn.gravatar.com, sdn.geekzu.org, gravatar.loli.net，默认：cn.gravatar.com",
   "ADMIN_CONFIG_ITEM_HIDE_ADMIN_CRYPT": "隐藏管理面板入口。可设置一个“暗号”，只有在“昵称”一栏输入相同的“暗号”时，管理面板入口才会显示，留空则不隐藏管理入口",
   "ADMIN_CONFIG_ITEM_HIGHLIGHT": "启用代码高亮功能。如果您的主题和代码高亮有冲突，请设为 false。默认：true",
@@ -32,6 +34,7 @@
   "ADMIN_CONFIG_ITEM_MAIL_TEMPLATE": "自定义通知邮件模板，留空则使用默认模板。可包含的字段：${SITE_URL}, ${SITE_NAME}, ${PARENT_NICK}, ${PARENT_COMMENT}, ${NICK}, ${COMMENT}, ${POST_URL}",
   "ADMIN_CONFIG_ITEM_MAIL_TEMPLATE_ADMIN": "自定义博主通知邮件模板，留空则使用默认模板。可包含的字段：${SITE_URL}, ${SITE_NAME}, ${NICK}, ${COMMENT}, ${POST_URL}",
   "ADMIN_CONFIG_ITEM_MASTER_TAG": "博主标识自定义文字，默认为 “博主”。",
+  "ADMIN_CONFIG_ITEM_NOTIFY_SPAM": "垃圾评论是否发送通知，默认：true",
   "ADMIN_CONFIG_ITEM_PUSH_PLUS_TOKEN": "推送加（pushplus.hxtrip.com）推送的 Token",
   "ADMIN_CONFIG_ITEM_QCLOUD_SECRET_ID": "腾讯云 secret id，用于垃圾评论检测。同时设置腾讯云和 Akismet 时，只有腾讯云会生效。注册：https://twikoo.js.org/cms.html",
   "ADMIN_CONFIG_ITEM_QCLOUD_SECRET_KEY": "腾讯云 secret key",
