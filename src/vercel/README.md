@@ -10,6 +10,8 @@ https://vercel.com/docs/configuration
 
 https://vercel.com/docs/runtimes
 
+https://vercel.com/docs/runtimes#official-runtimes/node-js/node-js-request-and-response-objects
+
 https://docs.mongodb.com/drivers/node/quick-start/
 
 http://mongodb.github.io/node-mongodb-native/3.6/api/

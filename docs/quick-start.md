@@ -1,4 +1,4 @@
-# 快速上手
+# 快速上手 - 腾讯云 CloudBase
 
 ::: warning 注意：云开发免费额度变更
 腾讯云已取消免费的云开发基础版 1 套餐（参考[产品定价](https://cloud.tencent.com/document/product/876/39095)），同时还调整了按量计费环境的免费额度（参考[免费额度](https://cloud.tencent.com/document/product/876/47816)），新的免费额度数据库读操作数由原先的 50000 次 / 天降至 500 次 / 天，**已无法支撑 Twikoo 的运行需求**。请暂时放弃免费搭建或购买 6.9 元 / 月的新特惠基础版 1，Twikoo 将会尽快寻找解决方案。
